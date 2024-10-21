@@ -11,9 +11,9 @@ Route::get('/about', function () {
 });
 
 Route::get('/contact', function () {
-    return 'Halaman Contact';
+    return view('contact');
 });
 
-Route::get('/blog', function () {
-    return 'Halaman blog';
+Route::get('/blog/{nama}', function ($nama) {
+    return view('blog', compact('nama'));
 });
